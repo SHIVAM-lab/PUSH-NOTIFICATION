@@ -1,7 +1,8 @@
-const app = express();
-app.use(bodyParser.json());
-require('mongoose').connect('mongodb://localhost/tattletale');
+var app = require('http');
+app.createServer().listen(3000);
+
+
+require('mongoose').connect('mongodb://localhost/tattletale' ,{useNewUrlParser: true,
+useUnifiedTopology: true});
 require('dotenv').config();
 
-const port = process.env.PORT||3000;
-app.listen(port,console.log(`server is running on ${port}`));
