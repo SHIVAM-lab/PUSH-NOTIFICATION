@@ -1,5 +1,5 @@
- var app;
- app.use()
+const app = express();
+app.use(bodyParser.json());
 require('mongoose').connect('mongodb://localhost/tattletale');
 require('dotenv').config();
 
